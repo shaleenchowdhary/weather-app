@@ -4,7 +4,8 @@
 
 :root {
   font-family: 'Roboto', 'Arial' !important;
-  background-color: #d5d4d4;
+  /* background-color: #d5d4d4; */
+  background-color: black;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
