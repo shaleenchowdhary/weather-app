@@ -4,8 +4,7 @@ import { geoApiOptions, GEO_API_URL } from '../../api';
 
 const Search = ({ onSearchChange }) => {
   const [search, setSearch] = useState(null);
-  const handleOnChange = (event) => {
-    const searchData = event.target.value;
+  const handleOnChange = (searchData) => {
     setSearch(searchData);
     onSearchChange(searchData);
   };
@@ -16,8 +15,15 @@ const Search = ({ onSearchChange }) => {
         `${GEO_API_URL}?namePrefix=${inputValue}`,
         geoApiOptions
       );
-      const result = await response.text();
-      console.log(result);
+      const result = await response.json();
+      return {
+        options: result.data.map((location) => {
+          return {
+            value: `${location.latitude} ${location.longitude}`,
+            label: `${location.name}, ${location.country}`,
+          };
+        }),
+      };
     } catch (error) {
       console.error(error);
     }
