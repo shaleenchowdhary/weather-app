@@ -1,10 +1,10 @@
 import './App.css';
-import Search from './components/search/Search';
+import Weather from './Weather';
 
 function App() {
   return (
-    <div className="">
-      <Search />
+    <div>
+      <Weather />
     </div>
   );
 }
