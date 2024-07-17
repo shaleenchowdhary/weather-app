@@ -13,7 +13,7 @@ const CurrentWeather = ({ currentWeatherData }) => {
         </div>
         <h1 className="text-2xl">
           {currentWeatherData.main.temp}
-          <span className="align-top text-2xl">°C</span> /
+          <span className="align-top text-2xl">°C</span> /{' '}
           {((currentWeatherData.main.temp * 9) / 5 + 32).toFixed()}
           <span className="align-top text-2xl">°F</span>
         </h1>
