@@ -14,7 +14,7 @@ const CurrentWeather = ({ currentWeatherData }) => {
         <h1 className="text-2xl">
           {currentWeatherData.main.temp}
           <span className="align-top text-2xl">°C</span> /
-          {((currentWeatherData.main.temp * 9) / 5 + 32).toFixed(5)}
+          {((currentWeatherData.main.temp * 9) / 5 + 32).toFixed()}
           <span className="align-top text-2xl">°F</span>
         </h1>
       </div>
@@ -31,7 +31,7 @@ const CurrentWeather = ({ currentWeatherData }) => {
               <p className="font-semibold">
                 {currentWeatherData.main.feels_like}
                 <span className="align-top">°C</span> /{' '}
-                {((currentWeatherData.main.feels_like * 9) / 5 + 32).toFixed(5)}
+                {((currentWeatherData.main.feels_like * 9) / 5 + 32).toFixed(3)}
                 <span className="align-top">°F</span>
               </p>
             </div>

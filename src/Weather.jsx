@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { WEATHER_API_URL, WEATHER_API_KEY } from './api';
 import CurrentWeather from './components/current-weather/CurrentWeather';
 import Search from './components/search/Search';
+// import ForecastWeather from './components/forecast-weather/ForecastWeather';
 
 const Weather = () => {
   const [currentWeather, setCurrentWeather] = useState('');
@@ -42,6 +43,7 @@ const Weather = () => {
     <div className="w-4/5 my-5 mx-auto">
       <Search onSearchChange={handleOnSearchChange} />
       {currentWeather && <CurrentWeather currentWeatherData={currentWeather} />}
+      {/* <ForecastWeather /> */}
     </div>
   );
 };
