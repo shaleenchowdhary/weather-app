@@ -15,17 +15,21 @@ const Search = ({ onSearchChange }) => {
         `${GEO_API_URL}?namePrefix=${inputValue}`,
         geoApiOptions
       );
+      if (!response.ok) {
+        throw new Error(`Error: ${response.statusText}`);
+      }
       const result = await response.json();
       return {
         options: result.data.map((location) => {
           return {
-            value: `${location.latitude} ${location.longitude}`,
             label: `${location.name}, ${location.country}`,
+            value: `${location.latitude} ${location.longitude}`,
           };
         }),
       };
     } catch (error) {
       console.error(error);
+      return [];
     }
   };
 
