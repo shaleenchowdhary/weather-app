@@ -2,7 +2,7 @@ const CurrentWeather = ({ currentWeatherData }) => {
   return (
     <div
       id="weather"
-      className="mt-5 px-4 w-full sm:w-fit mx-auto rounded-lg border border-blue-600 shadow-custom-shadow text-white bg-slate-600"
+      className="mt-5 px-4 w-full sm:w-fit mx-auto rounded-lg text-forecast-text bg-forecast-box"
     >
       <div className="flex justify-between items-center gap-x-4 text-left py-4">
         <div>
