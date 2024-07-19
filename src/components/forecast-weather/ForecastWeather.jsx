@@ -22,7 +22,7 @@ const ForecastWeather = ({ forecastWeatherData }) => {
 
   return (
     <div className="my-4">
-      <h3 className="text-lg font-semibold text-forecast-heading">
+      <h3 className="text-lg font-semibold text-forecast-text py-1 bg-forecast-box rounded-lg">
         Daily Weather Forecast
       </h3>
       {forecastWeatherData.list.slice(0, 7).map((day, index) => {
