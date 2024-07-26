@@ -14,7 +14,9 @@ Check out the live demo [here](https://weather-app-shaleen.vercel.app/).
 
 ## Screenshots
 
-![Weather App Screenshot](./src/assets/screenshots)
+![Mobile Version](./src/assets/screenshots/City-Weather-Mobile.jpg)
+![PC Version](./src/assets/screenshots/City-Weather-PC.png)
+
 
 ## Technologies Used
 
